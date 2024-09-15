@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Keeps menu horizontal */
+        }
+
+        nav ul li {
+            margin: 0 20px; /* Spacing between menu items */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-shadow: 1px 1px 2px red;
+        }
+
+        nav ul li a:hover {
+            color: #00ccff;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Push elements to the top */
+            height: 90vh; /* Make sure the content stays in view */
+            padding: 0; /* Remove padding */
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .fade-out {
+            opacity: 0; /* Fade out effect */
+        }
+
+        .content-container {
+            text-align: center;
+            margin-top: -3px; /* Reduce the gap to push up the content */
+        }
+
+        .content-container img {
+            width: 40%; /* Reduce the image size slightly */
+            height: auto;
+            border-radius: 50px;
+            background-color: black;
+            margin-top: 2%; /* Less margin to move everything up */
+        }
+
+        /* Red rounded button for "HIRE ME" */
+        .hire-me-btn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            margin-top: 15px; /* More space between the image and button */
+        }
+
+        .hire-me-btn:hover {
+            background-color: darkred;
+        }
+
+        p {
+            font-size: 18px; /* Adjust font size */
+            margin-top: 15px; /* Space between button and quote */
+            text-align: center; /* Center the text */
+        }
+
+        footer {
+            text-align: center;
+            background-color: black;
+            color: white;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: row; /* Keeps menu horizontal */
+                align-items: center;
+                justify-content: center;
+            }
+
+            .main-content {
+                height: auto; /* Allow the content to flow freely on smaller screens */
+            }
+
+            .content-container img {
+                width: 80%; /* Reduce the image size on smaller screens */
+            }
+
+            .hire-me-btn {
+                background-color: red;
+                color: white;
+                padding: 5px 25px;
+                border: none;
+                border-radius: 30px;
+                font-size: 20px;
+                cursor: pointer;
+                display: block; /* Ensure the button takes up full width and is block-level */
+                margin: 15px auto; /* Center the button under the image */
+                text-align: center; /* Center the text inside the button */
+            }
+
+            p {
+                font-size: 16px; /* Smaller text for mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+    <nav>
+        <ul>
+            <li><a href="career.html" onclick="transitionToPage(event, 'career.html')">Career</a></li>
+            <li><a href="digitalworks.html" onclick="transitionToPage(event, 'digitalworks.html')">Digital Creations</a></li>
+            <li><a href="contact.html" onclick="transitionToPage(event, 'contact.html')">Contact</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+<div class="main-content">
+    <div class="content-container">
+        <img src="virtualme.jpg" alt="Profile Image">
+        <button class="hire-me-btn">HIRE ME</button>
+        <p>"We are what we repeatedly do. Excellence, then, is not an act, but a habit" - Aristotle</p>
+    </div>
+</div>
+
+<footer>
+    <!-- The footer will remain unchanged -->
+</footer>
+
+<script>
+    function transitionToPage(event, page) {
+        event.preventDefault(); // Prevent default link behavior
+        const mainContent = document.querySelector('.main-content');
+
+        // Start fade-out transition
+        mainContent.classList.add('fade-out');
+
+        // Wait for the fade-out transition to finish before navigating
+        setTimeout(() => {
+            window.location.href = page; // Navigate to the new page
+        }, 500); // Duration should match the CSS transition
+    }
+</script>
+
+</body>
+</html>

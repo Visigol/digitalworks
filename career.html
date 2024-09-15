@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Career Page - André Gentil Homem</title>
+    <style>
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('virtualme.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            opacity: 0; /* Start as invisible */
+            transition: opacity 0.5s ease; /* Transition effect */
+        }
+
+        body.visible {
+            opacity: 1; /* Make visible */
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-shadow: 1px 1px 2px red;
+        }
+
+        nav ul li a:hover {
+            color: #00ccff;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            flex: 1;
+        }
+
+        .text-container {
+            width: 45%;
+            padding-right: 20px;
+        }
+
+        .timeline {
+            width: 50%;
+            padding-left: 20px;
+        }
+
+        .timeline h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .timeline ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .timeline li {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent */
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            position: relative;
+            border: none; /* No borders */
+        }
+
+        .timeline li::before {
+            content: ' ';
+            position: absolute;
+            left: -10px;
+            top: 10px;
+            background-color: red;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+        }
+
+        .bullet-points {
+            list-style-type: circle;
+            margin-top: 10px;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 0;
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .text-container, .timeline {
+                width: 100%;
+                padding: 10px;
+            }
+
+            nav ul li {
+                margin: 0 15px; /* Reduced margin */
+            }
+
+            nav ul li a {
+                font-size: 16px; /* Slightly smaller font size */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Career Overview</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html" onclick="transitionToPage(event, 'index.html')">Home</a></li>
+            <li><a href="digitalworks.html">Digital Creations</a></li>
+            <li><a href="contact.html" onclick="transitionToPage(event, 'contact.html')">Contact</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+<div class="main-content">
+    <div class="text-container">
+        <h2>Gave my Cv to my AI and the reply was quite accurate. Career Summary:</h2>
+        <p>
+            With a bachelor degree in Philosophy and over a decade of experience in entrepreneurship, André Gentil Homem has established himself as a business owner and innovative thinker. Leading M2Students since 2013, a housing company catering to international students, he has also overseen various cultural initiatives exposing Portuguese culture to the world. His experience spans multiple industries, including IT support, human resources, and teaching.
+        </p>
+        <p>
+            His philosophy-driven approach in education allowed him to mentor students in critical thinking, while his business acumen was evident in managing multiple student accommodations and cultural projects. The Erasmus Houses in Porto, under his leadership, provided not only housing but also a cultural bridge for international students.
+        </p>
+    </div>
+
+    <div class="timeline">
+        <h2>Career Timeline</h2>
+        <ul>
+            <li>                
+                <strong>2013 - Present:</strong> Business Owner at M2Students.UNI.LDA, managing student housing and cultural activities in Porto, Portugal.
+                <ul class="bullet-points">
+                    <li>Owned and managed 2 hostels and 40 rooms in guest houses</li>
+                    <li>Organized cultural activities</li>
+                    <li>Targeted international students</li>
+                    <li>Organized cultural group trips of international students</li>
+                    <li>Created automated platforms for housing</li>
+                </ul>
+            </li>
+            <li>
+                <strong>2012 - 2013:</strong> IT Helpdesk Technician at HCL Technologies in Kraków, Poland, resolving software and network issues.
+                <ul class="bullet-points">
+                    
+                    <li>Technical Support: Provides first-level support for hardware, software, and network issues.</li>
+    <li>Troubleshooting: Diagnoses and resolves technical problems for users via phone, email, or chat.</li>
+    <li>Incident Management: Logs and tracks incidents in the helpdesk system, ensuring timely resolution.</li>
+    <li>User Assistance: Assists users with application installations, configurations, and updates.</li>
+    <li>Documentation: Creates and maintains knowledge base articles and documentation for troubleshooting procedures.</li>
+    <li>System Monitoring: Monitors systems and alerts to identify potential issues before they escalate.</li>
+    <li>Training: Provides training and guidance to users on software and hardware usage.</li>
+    <li>Escalation: Escalates unresolved issues to higher-level support or specialized teams as necessary.</li>
+    <li>Hardware Setup: Configures and sets up computers, printers, and other peripherals for new users.</li>
+    <li>Network Support: Assists with basic network connectivity issues and setups, including VPNs.</li>
+    <li>Customer Service: Maintains a high level of customer service and professionalism in all interactions.</li>
+                    
+                </ul>
+            </li>
+            <li>
+                <strong>2011 - 2012:</strong> Human Resources Specialist at Philip Morris International, managing HR operations.
+                <ul class="bullet-points">
+                    <ul>
+    <li>Recruitment: Manages the recruitment process, including job postings, candidate screening, and interviews.</li>
+    <li>Employee Onboarding: Facilitates the onboarding process for new employees, ensuring a smooth transition into the company.</li>
+    <li>Performance Management: Supports the performance appraisal process and assists managers in setting performance objectives.</li>
+    <li>Employee Relations: Acts as a point of contact for employees regarding HR-related inquiries and concerns.</li>
+    <li>Policy Implementation: Ensures compliance with HR policies and procedures, and assists in their development.</li>
+    <li>Training and Development: Identifies training needs and coordinates employee training programs.</li>
+    <li>Compensation and Benefits: Assists in administering employee compensation and benefits programs.</li>
+    <li>HR Reporting: Prepares HR metrics and reports to analyze trends and support decision-making.</li>
+    <li>Employee Engagement: Promotes employee engagement initiatives to enhance workplace satisfaction and retention.</li>
+    <li>Compliance: Ensures adherence to labor laws and regulations, maintaining an ethical workplace.</li>
+</ul>
+
+                </ul>
+            </li>
+            <li>
+                <strong>2010 - 2011:</strong> Assistant Teacher at Spoleczna Skola, teaching students philosophy and critical thinking.
+                <ul class="bullet-points">
+                    <li>Classroom Support: Assists the lead teacher in managing classroom activities and maintaining a positive learning environment.</li>
+    <li>Lesson Preparation: Aids in the preparation of lesson materials and educational resources.</li>
+    <li>Student Assistance: Provides individualized support to students who may need extra help or guidance.</li>
+    <li>Behavior Management: Helps monitor student behavior and implements classroom management strategies.</li>
+    <li>Administrative Tasks: Assists with administrative duties, including grading assignments and maintaining student records.</li>
+    <li>Communication: Facilitates communication between teachers, students, and parents regarding student progress.</li>
+    <li>Classroom Organization: Aids in keeping the classroom organized and ensuring materials are readily available.</li>
+    <li>Activity Coordination: Supports the planning and execution of educational and extracurricular activities.</li>
+    <li>Feedback and Assessment: Assists in providing feedback to students and contributes to assessing their performance.</li>
+    <li>Professional Development: Participates in training and development opportunities to enhance teaching skills.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>2009 - 2010:</strong> Native Philosophy Teacher at Liceum nr 2, leading classes in ancient and political philosophy.
+                <ul class="bullet-points">
+                    <ul>
+    <li>Curriculum Development: Creates engaging lesson plans that introduce basic philosophical concepts suitable for children.</li>
+    <li>Classroom Instruction: Teaches philosophy in a fun and accessible way, encouraging curiosity and questioning.</li>
+    <li>Student Engagement: Facilitates interactive discussions that allow children to express their thoughts and ideas.</li>
+    <li>Classroom Management: Maintains a positive and respectful classroom atmosphere where every child feels safe to participate.</li>
+    <li>Individual Support: Offers additional help to students who struggle to grasp philosophical ideas.</li>
+    <li>Creative Activities: Incorporates games, storytelling, and creative projects to illustrate philosophical concepts.</li>
+    <li>Feedback and Assessment: Provides constructive feedback to students on their understanding and ideas.</li>
+    <li>Encouraging Exploration: Promotes exploration of moral and ethical questions through age-appropriate discussions.</li>
+    <li>Parental Involvement: Engages with parents to share students' progress and encourage philosophical discussions at home.</li>
+    <li>Professional Development: Participates in training to improve teaching methods for younger students.</li>
+</ul>
+
+                </ul>
+            </li>
+            <li>
+                <strong>2007 - 2010:</strong> Active in multiple cultural and student organizations, leading various initiatives at AEFLUP and Escola Secundária de Canelas.
+                <ul class="bullet-points">
+                    <li>@ University: Head of the Cultural Departement of Student Association</li>
+                    <li>@ High School: President of Student Association </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 André Gentil Homem - All Rights Reserved</p>
+</footer>
+
+<script>
+    // Add a class to body to make it visible after load
+    document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('visible');
+    });
+
+    function transitionToPage(event, page) {
+        event.preventDefault(); // Prevent default link behavior
+        const body = document.querySelector('body');
+
+        // Start fade-out transition
+        body.classList.remove('visible');
+
+        // Wait for the fade-out transition to finish before navigating
+        setTimeout(() => {
+            window.location.href = page; // Navigate to the new page
+        }, 500); // Duration should match the CSS transition
+    }
+</script>
+
+</body>
+</html>

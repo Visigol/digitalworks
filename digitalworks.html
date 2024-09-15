@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital Creations</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('virtualme.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full height */
+            opacity: 1; /* Default opacity */
+            transition: opacity 0.5s ease; /* Transition effect for vanishing */
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px; /* Reduced margin */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-shadow: 1px 1px 2px red;
+        }
+
+        nav ul li a:hover {
+            color: #00ccff;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            padding: 50px;
+            flex: 1; /* Make this section grow to fill the space */
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .posts-container {
+            width: 70%;
+            padding: 20px;
+        }
+
+        .post {
+            background-color: rgba(255, 255, 255, 0.1); /* More transparent */
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .post h2 {
+            margin-top: 0;
+        }
+
+        .sidebar {
+            width: 30%;
+            padding: 20px;
+            position: sticky; /* Make sidebar sticky */
+            top: 20px; /* Adjust as necessary */
+        }
+
+        .timeline {
+            border-left: 5px solid red; /* Vertical red line */
+            padding-left: 20px;
+            margin-left: 20px;
+        }
+
+        .timestamp {
+            margin: 20px 0;
+            cursor: pointer;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .timestamp:hover {
+            color: #00ccff; /* Change color on hover */
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .posts-container, .sidebar {
+                width: 90%;
+            }
+
+            .timeline {
+                padding-left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Digital Creations</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html" onclick="fadeOut(event, 'index.html')">Home</a></li>
+            <li><a href="career.html" onclick="fadeOut(event, 'career.html')">Career</a></li>
+            <li><a href="contact.html" onclick="fadeOut(event, 'contact.html')">Contact</a></li>
+           
+        </ul>
+    </nav>
+</header>
+
+<div class="main-content">
+    <div class="posts-container">
+        <div class="post" id="post1">
+            <h2>Housing Automated Online Check In Google Sheets</h2>
+            <img src="appscript.jpg" alt="appscript" style="width: 150px; border-radius: 10px; margin: 0 auto 20px; display: block;">
+            <img src="uisheet.png" alt="UI Sheet" style="width:100%; border-radius:10px; margin-bottom: 20px;">
+            <ul>
+                <li><strong>Google Apps Script Proficiency:</strong> Gained practical experience in using Google Apps Script for automating tasks within Google Sheets and Google Docs.</li>
+                <li><strong>Menu Creation:</strong> Learned how to enhance the user interface of Google Sheets by adding custom menus for easier navigation and functionality.</li>
+                <li><strong>Data Handling:</strong> Developed skills in handling and manipulating data arrays, which is crucial for reading and writing data in spreadsheets.</li>
+                <li><strong>Document Management:</strong> Understood how to manage Google Docs and PDFs through the Drive API, including creating copies, replacing text, and saving documents.</li>
+                <li><strong>Email Automation:</strong> Gained insight into automating email sending with attachments, which can streamline communication processes significantly.</li>
+                <li><strong>Error Handling:</strong> Implemented error handling strategies to manage potential issues during PDF retrieval and email sending, improving the robustness of the script.</li>
+            </ul>
+            <p>This Google Sheet project showcases my ability to automate and streamline tasks using scripting, demonstrating a solid understanding of both Google Sheets and Google Apps Script.</p>
+            <div style="text-align: right; margin-top: 20px;">
+                <a href="appscript.html" style="background-color: red; color: white; padding: 10px 15px; border-radius: 30px; text-decoration: none; font-weight: bold;">Test my Google Apps Script</a>
+            </div>
+        </div>
+
+        <div class="post" id="post2">
+            <h2>Erasmus in Porto Wordpress site - with Apple and Android App with translated News for International Students</h2>
+            <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+                <img src="apple.jpg" alt="Apple Store" style="width: 100px; height: auto;">
+                <img src="googleplay.jpg" alt="Google Play Store" style="width: 100px; height: auto;">
+            </div>
+            <p>The Erasmus in Porto WordPress website is designed to be easier to manage through multiple users with no coding experience. The use of WordPress allows for a plugin to convert it into an app. This process taught me the complexities of getting apps into stores and adhering to their requirements.</p>
+            <ul>
+                <li>Translated local news</li>
+                <li>Notifications on trending topics</li>
+                <li>Interactive comments section</li>
+                <li>User-friendly chat system for discussions</li>
+                <li>Tailored for international students/travelers</li>
+            </ul>
+            <p>This helps users stay informed about the latest events and news during their stay in Porto.</p>
+            <h3>Upcoming Features:</h3>
+            <ul>
+                <li><strong>Event Highlights:</strong> Special notifications about local events and cultural activities tailored for international students.</li>
+                <li><strong>Language Tips:</strong> Daily language tips to help users learn common Portuguese phrases and integrate better.</li>
+                <li><strong>Location-Based Recommendations:</strong> Personalized suggestions for restaurants, cafes, and activities based on the user's current location within Porto.</li>
+                <li><strong>Social Groups:</strong> Users can create and join groups (e.g., sports, culture, or student meetups) to socialize and organize events in Porto.</li>
+                <li><strong>Crisis Alerts:</strong> Emergency notifications (e.g., strikes, public transport issues) to keep users informed of any sudden changes in the city.</li>
+            </ul>
+            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                <a href="https://apps.apple.com/pt/app/erasmus-in-porto/id6455786986?l=en-GB" style="background-color: red; color: white; padding: 10px 15px; border-radius: 30px; text-decoration: none; font-weight: bold;">Check Apple Store Shop</a>
+                <a href="https://play.google.com/store/apps/details?id=apperasmusinportocom.wpapp" style="background-color: blue; color: white; padding: 10px 15px; border-radius: 30px; text-decoration: none; font-weight: bold;">Check Google Play Shop</a>
+            </div>
+        </div>
+
+        <div class="post" id="post3">
+             <h2>Erasmus in Porto Wordpress site with RSS feed translated News for International Students</h2>
+    <img src="website.jpg" alt="website" style="width: 150px; border-radius: 10px; margin: 0 auto 20px; display: block;">
+             <p>The Erasmus in Porto wordpress website that pushes through multiple rss feeds with news about Portugal that are already translated into english and gives a breef resume format similar to Twitter, with features designed for international students and travelers staying in Porto.</p>
+   <p> To be created this site required the following work:
+    Technical Proficiency:</p>
+
+<p>Enhanced skills in programming languages (e.g., JavaScript, Python) and frameworks relevant to app development.</p>
+<p>Problem-Solving Abilities:</p>
+
+<p>Improved ability to troubleshoot and resolve technical issues efficiently, fostering critical thinking.</p>
+<p>Project Management Skills:</p>
+
+<p>Experience in planning, organizing, and managing resources to meet deadlines and project goals.</p>
+<p>User Experience (UX) Understanding:</p>
+
+<p>Knowledge of creating user-friendly interfaces and ensuring a seamless experience for users.</p>
+<img src="eip.jpg" alt="eip" style="width: 100%; max-width: 800px; border-radius: 10px; margin: 0 auto 20px; display: block;">
+
+<p>Adaptability:</p>
+
+<p>Ability to adapt to new technologies, tools, and trends in the ever-evolving field of app development.</p>
+<p>Collaboration and Communication:</p>
+
+<p>Improved teamwork and communication skills through collaboration with designers, stakeholders, and users.</p>
+<p>Attention to Detail:</p>
+
+<p>Cultivation of meticulous attention to detail in coding, design, and functionality to deliver a high-quality product.</p>
+<p>Research and Analytical Skills:</p>
+
+<p>Strengthened ability to conduct research, analyze user feedback, and implement improvements based on data-driven insights.</p>
+<p>Creativity:</p>
+
+<p>Development of creative problem-solving skills to design innovative features and functionalities that enhance the app.</p>
+<p>Understanding of Market Needs:</p>
+
+<p>Insight into user demographics and market trends, enabling the creation of relevant and valuable app features for the target audience.</p>
+<div style="text-align: right; margin-top: 20px;">
+                <a href="https://erasmusinporto.com/" style="background-color: red; color: white; padding: 10px 15px; border-radius: 30px; text-decoration: none; font-weight: bold;">Check Wordpress Website</a>
+            </div>
+        </div>
+
+        <div class="post" id="post4">
+            <h2>This Interactive Portfolio with Resume and Projects in HTML</h2>
+            <img src="logo2.jpg" alt="appscript" style="width: 450px; border-radius: 10px; margin: 0 auto 20px; display: block;">
+            <p>This project involved building an interactive portfolio website that showcases my resume and key projects. It provided a platform for potential employers to view my skills and work experience.</p>
+            <ul>
+                <li><strong>Showcase Projects:</strong> Included sections for various projects, with images and descriptions.</li>
+                <li><strong>Resume Download:</strong> Provided a downloadable version of my resume for easy access.</li>
+                <li><strong>Contact Form:</strong> Allowed visitors to reach out to me directly through the website.</li>
+            </ul>
+            <p>This portfolio demonstrates my web development skills and my ability to create an engaging user experience.</p>
+        </div>
+
+        
+    </div>
+
+    <div class="sidebar">
+        <div class="timeline">
+            <h2>Timeline</h2>
+            <div class="timestamp" onclick="scrollToPost('post1')">Project 1: Housing Automation</div>
+            <div class="timestamp" onclick="scrollToPost('post2')">Project 2: Apple and Ggole Play Stores & Apps</div>
+            <div class="timestamp" onclick="scrollToPost('post3')">Project 3: Dynamic Wordpress Web Page</div>
+            <div class="timestamp" onclick="scrollToPost('post4')">Project 4: Interactive Portfolio</div>
+            
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 André Gentil Homem. All rights reserved.</p>
+</footer>
+
+<script>
+    function scrollToPost(postId) {
+        const postElement = document.getElementById(postId);
+        postElement.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function fadeOut(event, url) {
+        event.preventDefault(); // Prevent default anchor behavior
+        const body = document.body;
+        body.style.opacity = 0; // Start fade-out transition
+
+        setTimeout(() => {
+            window.location.href = url; // Redirect after fade-out
+        }, 500); // Match the timeout with the CSS transition duration
+    }
+</script>
+
+</body>
+</html>
+

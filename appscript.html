@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google AppScript</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            text-align: center; /* Center text */
+        }
+
+        header {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-shadow: 1px 1px 2px red;
+        }
+
+        nav ul li a:hover {
+            color: #00ccff;
+        }
+
+        .main-content {
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 0 auto; /* Center main content */
+        }
+
+        .google-sheet {
+            width: 100%;
+            height: 400px;
+            border: none;
+            margin-bottom: 50px;
+        }
+
+        .button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px; /* Space above button */
+    margin-bottom: 30px; /* Increased space below button */
+    display: inline-block; /* Center button */
+}
+
+
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 0;
+        }
+
+        img {
+            width: 50%; /* 50% of its original size */
+            max-width: 400px; /* Limit max width */
+            border: 4px solid red;
+            border-radius: 15px;
+            margin-bottom: 20px; /* Space below image */
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .google-sheet {
+                height: 300px; /* Adjust height for mobile */
+            }
+
+            img {
+                width: 70%; /* Smaller size for mobile */
+                max-width: 300px; /* Max width to maintain aspect ratio */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Online Check In Automated Google AppScript</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="digitalworks.html">Digital Creations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+<div class="main-content">
+    <!-- Google Form Image -->
+    <img src="formprint.jpg" alt="Google Form Screenshot">
+    <p>This is a screenshot of the Google Form used for collecting user information and feedback.</p>
+    <p>This is the form that each guest receives via email from the PMS of the hostel or guest house.</p>
+    <p>You can fill the form with fictional data, and upon submission, the data will appear on the Google Sheet.</p>
+    <p>
+    
+    
+    <!-- Red Button for Google Form -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScGRTgc0dc8777MYrNgmlPHnW07LRMi7nsv_lGbKo0GNSeV1Q/viewform?usp=sf_link" target="_blank" class="button">
+       Open Google Form
+    </a>
+
+    <!-- Google Sheet Embed -->
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjxfSx1FsIsT-oHATt2sw4Gm6qLx_1I-w-HdqDvA70tWbCy18y9F3l6o_8H4k4Mb-93Gc5OC9vc3uc/pubhtml?widget=true&amp;headers=false" 
+            width="300" height="200" frameborder="0" class="google-sheet"></iframe>
+    
+    <p>This is a live sample of the Google Sheet but you can open the sheet in the button below.</p>
+    <p>You have sending email, private messaging, creating google doc contracts and fill it automatically.</p>
+    <p>You can export contract to pdf, create random codes for the door accesses, reminders and much more.</p>
+    <p>Test it yourself</p>
+
+    <!-- Red Button for Google Sheet -->
+    <a href="https://docs.google.com/spreadsheets/d/18zXb2L1Upf0jirM9FbBAXXmyMeNcvNG0f01dDBBw4DM/edit?usp=sharing" target="_blank" class="button">
+       Open Google Sheet
+    </a>
+
+    <h2>Google Sheet Online Check-In Functionalities</h2>
+
+    <!-- First Column with Bullet Points -->
+    <div style="text-align: left; margin: 0 auto; width: 80%;"> <!-- Centered content -->
+        <h3>Functionalities</h3>
+        
+        <h4>User Interface:</h4>
+        <ul>
+            <li>Custom menu creation for various actions (sending emails, creating contracts, generating codes, converting documents).</li>
+            <li>Alerts for unacknowledged messages tailored to the logged-in user.</li>
+        </ul>
+
+        <h4>Email Functionality:</h4>
+        <ul>
+            <li>Send personalized emails to users with contract details and attached PDFs.</li>
+            <li>Automatic logging of email timestamps in the Google Sheet.</li>
+            <li>Condition-based email sending based on user interaction (tick status).</li>
+        </ul>
+
+        <h4>Document Management:</h4>
+        <ul>
+            <li>Create new Google Docs from a template with user-specific data populated.</li>
+            <li>Store links to generated contracts in the Google Sheet.</li>
+            <li>Conversion of Google Docs to PDFs and logging of URLs.</li>
+        </ul>
+    </div>
+
+    <!-- Second Column with Bullet Points -->
+    <div style="text-align: left; margin: 0 auto; width: 80%;"> <!-- Centered content -->
+        <h4>Data Handling:</h4>
+        <ul>
+            <li>Retrieve and process data from specified columns in the Google Sheet.</li>
+            <li>Validate user interactions and update the acknowledgment status of messages.</li>
+            <li>Search functionality to find specific row indices based on column values.</li>
+        </ul>
+
+        <h4>Dynamic Content Creation:</h4>
+        <ul>
+            <li>Template-based document generation for contracts using user information (e.g., name, dates, addresses).</li>
+            <li>Formatting of dates and other data fields in the document.</li>
+        </ul>
+
+        <h4>Error Handling:</h4>
+        <ul>
+            <li>Logging of errors encountered during document creation or email sending for debugging purposes.</li>
+            <li>Skip rows in data processing based on predefined conditions (e.g., if certain columns are empty or already processed).</li>
+        </ul>
+
+        <h4>Random Code Generation:</h4>
+        <ul>
+            <li>Functionality to generate random door codes for rooms and update the corresponding cells in the Google Sheet.</li>
+        </ul>
+
+        <h4>User Notification:</h4>
+        <ul>
+            <li>Alerts to inform users about new messages or status updates within the system.</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 André Gentil Homem - All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
+
