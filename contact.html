@@ -177,7 +177,7 @@
     <div class="form-container">
         <h2>Get in Touch</h2>
         
-           <form action="https://script.google.com/macros/s/AKfycbxYPSn8bSnZ_FVYx8dm2wqWgquG8gj-DlD4cWH0tkzsLMqCcDUrAq2GdqKwG94RVS79cw/exec" method="POST">
+          <form action="https://script.google.com/macros/s/AKfycbxYPSn8bSnZ_FVYx8dm2wqWgquG8gj-DlD4cWH0tkzsLMqCcDUrAq2GdqKwG94RVS79cw/exec" method="POST" onsubmit="handleSubmit(event)">
     <div class="form-group">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
@@ -194,6 +194,43 @@
         <button type="submit">Send Message</button>
     </div>
 </form>
+
+<script>
+    // Add a class to body to make it visible after load
+    document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('visible');
+    });
+
+    function handleSubmit(event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Submit the form via fetch or XMLHttpRequest if needed
+        const form = event.target;
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            if (response.ok) {
+                // Redirect after 5 seconds
+                setTimeout(() => {
+                    window.location.href = 'index.html'; // Change to your homepage URL
+                }, 5000);
+            } else {
+                // Handle errors
+                alert('There was an error submitting the form.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting the form.');
+        });
+    }
+</script>
+
 
     </div>
 
