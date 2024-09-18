@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,10 +17,9 @@
         }
 
         .active {
-    color: #00ccff; /* Highlight color */
-    text-shadow: 1px 1px 3px red;
-}
-
+            color: #00ccff; /* Highlight color */
+            text-shadow: 1px 1px 3px red;
+        }
 
         header {
             padding: 20px;
@@ -56,23 +54,13 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start; /* Push elements to the top */
-            height: 90vh; /* Make sure the content stays in view */
-            padding: 0; /* Remove padding */
-            opacity: 1;
-            transition: opacity 0.5s ease;
-        }
-
-        .content-container {
-            margin-top: -20px; /* Push content upwards */
-        }
-
-        .fade-out {
-            opacity: 0; /* Fade out effect */
+            height: auto; /* Allow content to flow freely */
+            padding: 20px; /* Add some padding */
         }
 
         .content-container {
             text-align: center;
-            margin-top: -3px; /* Reduce the gap to push up the content */
+            margin-top: 20px; /* Space between elements */
         }
 
         .content-container img {
@@ -127,6 +115,7 @@
 
             .main-content {
                 height: auto; /* Allow the content to flow freely on smaller screens */
+                padding: 20px; /* Add padding for smaller screens */
             }
 
             .content-container img {
@@ -136,12 +125,12 @@
             .hire-me-btn {
                 background-color: red;
                 color: white;
-                padding: 5px 25px;
+                padding: 10px 20px; /* Adjust padding for mobile */
                 border: none;
                 border-radius: 30px;
-                font-size: 20px;
+                font-size: 18px; /* Adjust font size for mobile */
                 cursor: pointer;
-                display: block; /* Ensure the button takes up full width and is block-level */
+                display: block; /* Ensure the button takes up full width */
                 margin: 15px auto; /* Center the button under the image */
                 text-align: center; /* Center the text inside the button */
             }
@@ -167,11 +156,10 @@
     </nav>
 </header>
 
-
 <div class="main-content">
     <div class="content-container">
         <img src="virtualme.jpg" alt="Profile Image">
-        <a href="contact.html" style="background-color: red; color: white; padding: 10px 15px; border-radius: 30px; text-decoration: none; font-weight: bold;">Hire Me</a>
+        <a href="contact.html" class="hire-me-btn">Hire Me</a>
         <p>"We are what we repeatedly do. Excellence, then, is not an act, but a habit" - Aristotle</p>
     </div>
 </div>
@@ -197,5 +185,3 @@
 
 </body>
 </html>
-</html>
-
