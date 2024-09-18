@@ -13,7 +13,8 @@
             padding: 0;
             background-color: black;
             color: white;
-            min-height: 100vh;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
         }
 
         header {
@@ -49,8 +50,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 80vh; /* Adjust to ensure content doesn't disappear */
-            padding: 20px;
+            height: 100vh;
+            padding: 0;
             text-align: center;
         }
 
@@ -59,6 +60,10 @@
             height: auto;
             border-radius: 50px;
             margin-bottom: 20px;
+        }
+
+        .content-container p {
+            margin-bottom: 40px; /* Increase space to push the button up */
         }
 
         .hire-me-btn {
@@ -76,16 +81,14 @@
             background-color: darkred;
         }
 
-        p {
-            font-size: 18px;
-            margin-top: 15px;
-        }
-
         footer {
             text-align: center;
             background-color: black;
             color: white;
-            padding: 10px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         @media (max-width: 600px) {
@@ -127,7 +130,7 @@
 </div>
 
 <footer>
-    <!-- Footer content here -->
+    <!--© 2024 André Gentil Homem. All rights reserved. -->
 </footer>
 
 <script>
