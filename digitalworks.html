@@ -126,14 +126,13 @@
 
 <header>
     <h1>Digital Creations</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html" onclick="fadeOut(event, 'index.html')">Home</a></li>
-            <li><a href="career.html" onclick="fadeOut(event, 'career.html')">Career</a></li>
-            <li><a href="contact.html" onclick="fadeOut(event, 'contact.html')">Contact</a></li>
-           
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="index.html" onclick="transitionToPage(event, 'index.html')">Home</a></li>
+        <li><a href="career.html"  onclick="transitionToPage(event, 'career.html')">Career</a></li>
+        <li><a href="digitalworks.html" class="active" onclick="transitionToPage(event, 'digitalworks.html')">Digital Creations</a></li>
+        <li><a href="contact.html" onclick="transitionToPage(event, 'contact.html')">Contact</a></li>
+    </ul>
+</nav>
 </header>
 
 <div class="main-content">
