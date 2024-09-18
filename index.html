@@ -13,7 +13,7 @@
             padding: 0;
             background-color: black;
             color: white;
-            overflow: hidden; /* Prevent scrolling */
+            min-height: 100vh;
         }
 
         header {
@@ -26,11 +26,11 @@
             list-style-type: none;
             padding: 0;
             display: flex;
-            justify-content: center; /* Keeps menu horizontal */
+            justify-content: center;
         }
 
         nav ul li {
-            margin: 0 20px; /* Spacing between menu items */
+            margin: 0 20px;
         }
 
         nav ul li a {
@@ -48,31 +48,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Push elements to the top */
-            height: 90vh; /* Make sure the content stays in view */
-            padding: 0; /* Remove padding */
-            opacity: 1;
-            transition: opacity 0.5s ease;
-        }
-
-        .fade-out {
-            opacity: 0; /* Fade out effect */
-        }
-
-        .content-container {
+            justify-content: center;
+            min-height: 80vh; /* Adjust to ensure content doesn't disappear */
+            padding: 20px;
             text-align: center;
-            margin-top: -3px; /* Reduce the gap to push up the content */
         }
 
         .content-container img {
-            width: 40%; /* Reduce the image size slightly */
+            width: 40%;
             height: auto;
             border-radius: 50px;
-            background-color: black;
-            margin-top: 2%; /* Less margin to move everything up */
+            margin-bottom: 20px;
         }
 
-        /* Red rounded button for "HIRE ME" */
         .hire-me-btn {
             background-color: red;
             color: white;
@@ -81,9 +69,7 @@
             border-radius: 50px;
             font-size: 20px;
             cursor: pointer;
-            text-align: center;
-            display: inline-block;
-            margin-top: 15px; /* More space between the image and button */
+            margin-bottom: 15px;
         }
 
         .hire-me-btn:hover {
@@ -91,52 +77,29 @@
         }
 
         p {
-            font-size: 18px; /* Adjust font size */
-            margin-top: 15px; /* Space between button and quote */
-            text-align: center; /* Center the text */
+            font-size: 18px;
+            margin-top: 15px;
         }
 
         footer {
             text-align: center;
             background-color: black;
             color: white;
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
+            padding: 10px;
         }
 
-        /* Responsive styles */
         @media (max-width: 600px) {
-            nav ul {
-                flex-direction: row; /* Keeps menu horizontal */
-                align-items: center;
-                justify-content: center;
-            }
-
-            .main-content {
-                height: auto; /* Allow the content to flow freely on smaller screens */
-            }
-
             .content-container img {
-                width: 80%; /* Reduce the image size on smaller screens */
+                width: 80%;
             }
 
             .hire-me-btn {
-                background-color: red;
-                color: white;
                 padding: 5px 25px;
-                border: none;
-                border-radius: 30px;
-                font-size: 20px;
-                cursor: pointer;
-                display: block; /* Ensure the button takes up full width and is block-level */
-                margin: 15px auto; /* Center the button under the image */
-                text-align: center; /* Center the text inside the button */
+                font-size: 18px;
             }
 
             p {
-                font-size: 16px; /* Smaller text for mobile */
+                font-size: 16px;
             }
         }
     </style>
@@ -151,7 +114,6 @@
             <li><a href="career.html" onclick="transitionToPage(event, 'career.html')">Career</a></li>
             <li><a href="digitalworks.html" onclick="transitionToPage(event, 'digitalworks.html')">Digital Creations</a></li>
             <li><a href="contact.html" onclick="transitionToPage(event, 'contact.html')">Contact</a></li>
-            
         </ul>
     </nav>
 </header>
@@ -159,27 +121,23 @@
 <div class="main-content">
     <div class="content-container">
         <img src="virtualme.jpg" alt="Profile Image">
-        <a href="contact.html" style="background-color: red; color: white; padding: 10px 15px; border-radius: 30px; text-decoration: none; font-weight: bold;">Hire Me</a>
+        <a href="contact.html" class="hire-me-btn">Hire Me</a>
         <p>"We are what we repeatedly do. Excellence, then, is not an act, but a habit" - Aristotle</p>
     </div>
 </div>
 
 <footer>
-    <!-- The footer will remain unchanged -->
+    <!-- Footer content here -->
 </footer>
 
 <script>
     function transitionToPage(event, page) {
         event.preventDefault(); // Prevent default link behavior
         const mainContent = document.querySelector('.main-content');
-
-        // Start fade-out transition
         mainContent.classList.add('fade-out');
-
-        // Wait for the fade-out transition to finish before navigating
         setTimeout(() => {
-            window.location.href = page; // Navigate to the new page
-        }, 500); // Duration should match the CSS transition
+            window.location.href = page;
+        }, 500);
     }
 </script>
 
