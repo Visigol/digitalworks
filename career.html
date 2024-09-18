@@ -24,6 +24,12 @@
             transition: opacity 0.5s ease; /* Transition effect */
         }
 
+         .active {
+            color: #00ccff; /* Highlight color */
+            text-shadow: 1px 1px 3px red;
+        }
+
+
         body.visible {
             opacity: 1; /* Make visible */
         }
@@ -148,11 +154,11 @@
 <header>
     <h1>Career Overview</h1>
     <nav>
-        <ul>
-            <li><a href="index.html" onclick="transitionToPage(event, 'index.html')">Home</a></li>
-            <li><a href="digitalworks.html">Digital Creations</a></li>
+       <ul>
+            <li><a href="index.html" class="active" onclick="transitionToPage(event, 'index.html')">Home</a></li>
+            <li><a href="career.html" onclick="transitionToPage(event, 'career.html')">Career</a></li>
+            <li><a href="digitalworks.html" onclick="transitionToPage(event, 'digitalworks.html')">Digital Creations</a></li>
             <li><a href="contact.html" onclick="transitionToPage(event, 'contact.html')">Contact</a></li>
-            
         </ul>
     </nav>
 </header>
