@@ -17,54 +17,30 @@
             overflow: hidden; /* Prevent scrolling */
         }
 
-        header {
-            padding: 20px;
-            text-align: center;
-            background-color: black;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            text-shadow: 1px 1px 2px red;
-        }
-
-        nav ul li a:hover {
-            color: #00ccff;
-        }
-
         .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 0;
-    text-align: center;
-    margin-bottom: 40px;
-    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 0;
+            text-align: center;
+            margin-bottom: 0; /* Remove bottom margin */
+        }
+
+        .content-container {
+            margin-top: -60px; /* Push content upwards */
+        }
 
         .content-container img {
-            width: 40%;
+            width: 40%; /* Keep image size */
             height: auto;
             border-radius: 50px;
-            margin-bottom: 40px;
+            margin-bottom: 20px; /* Reduce bottom margin to move content up */
         }
 
         .content-container p {
-            margin-bottom: 80px; /* Increase space to push the button up */
+            margin-bottom: 40px; /* Increase space above button */
         }
 
         .hire-me-btn {
@@ -75,7 +51,7 @@
             border-radius: 50px;
             font-size: 20px;
             cursor: pointer;
-            margin-bottom: 60px;
+            margin-bottom: 30px;
         }
 
         .hire-me-btn:hover {
@@ -91,16 +67,16 @@
             left: 50%;
             transform: translateX(-50%);
             margin-bottom: 80px; /* Adjusted bottom margin */
-}
         }
 
+        /* Mobile styles */
         @media (max-width: 600px) {
             .content-container img {
-                width: 80%;
+                width: 60%; /* Prevent image shrinking too much */
             }
 
             .hire-me-btn {
-                padding: 5px 25px;
+                padding: 5px 20px;
                 font-size: 18px;
             }
 
@@ -113,40 +89,42 @@
 
 <body>
 
-<header>
-    <h1>My Portfolio</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html" onclick="transitionToPage(event, 'index.html')">Home</a></li>
-            <li><a href="career.html" onclick="transitionToPage(event, 'career.html')">Career</a></li>
-            <li><a href="digitalworks.html" onclick="transitionToPage(event, 'digitalworks.html')">Digital Creations</a></li>
-            <li><a href="contact.html" onclick="transitionToPage(event, 'contact.html')">Contact</a><
-        </ul>
-    </nav>
-</header>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" onclick="transitionToPage(event, 'index.html')">Home</a></li>
+                <li><a href="career.html" onclick="transitionToPage(event, 'career.html')">Career</a></li>
+                <li><a href="digitalworks.html" onclick="transitionToPage(event, 'digitalworks.html')">Digital Creations</a></li>
+                <li><a href="contact.html" onclick="transitionToPage(event, 'contact.html')">Contact></a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="main-content">
-    <div class="content-container">
-        <img src="virtualme.jpg" alt="Profile Image">
-        <a href="contact.html" class="hire-me-btn">Hire Me</a>
-        <p>"We are what we repeatedly do. Excellence, then, is not an act, but a habit" - Aristotle</p>
+    <div class="main-content">
+        <div class="content-container">
+            <img src="virtualme.jpg" alt="Profile Image">
+            <a href="contact.html" class="hire-me-btn">Hire Me</a>
+            <p>"We are what we repeatedly do. Excellence, then, is not an act, but a habit" - Aristotle</p>
+        </div>
     </div>
-</div>
 
-<footer>
-    <!-- -->
-</footer>
+    <footer>
+        <!-- Footer content -->
+    </footer>
 
-<script>
-    function transitionToPage(event, page) {
-        event.preventDefault(); // Prevent default link behavior
-        const mainContent = document.querySelector('.main-content');
-        mainContent.classList.add('fade-out');
-        setTimeout(() => {
-            window.location.href = page;
-        }, 500);
-    }
-</script>
+    <script>
+        function transitionToPage(event, page) {
+            event.preventDefault(); // Prevent default link behavior
+            const mainContent = document.querySelector('.main-content');
+            mainContent.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = page;
+            }, 500);
+        }
+    </script>
 
 </body>
+
 </html>
+
