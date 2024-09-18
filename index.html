@@ -14,42 +14,66 @@
             padding: 0;
             background-color: black;
             color: white;
-            height: 100vh;
             overflow: hidden; /* Prevent scrolling */
         }
 
-         /* Highlight active menu item */
-        .active {
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Keeps menu horizontal */
+        }
+
+        nav ul li {
+            margin: 0 20px; /* Spacing between menu items */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-shadow: 1px 1px 2px red;
+        }
+
+        nav ul li a:hover {
             color: #00ccff;
-            text-shadow: 1px 1px 3px red;
         }
 
         .main-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
-            padding: 0;
-            text-align: center;
-            margin-bottom: 0; /* Remove bottom margin */
+            justify-content: flex-start; /* Push elements to the top */
+            height: 90vh; /* Make sure the content stays in view */
+            padding: 0; /* Remove padding */
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .fade-out {
+            opacity: 0; /* Fade out effect */
         }
 
         .content-container {
-            margin-top: -60px; /* Push content upwards */
+            text-align: center;
+            margin-top: -3px; /* Reduce the gap to push up the content */
         }
 
         .content-container img {
-            width: 40%; /* Keep image size */
+            width: 40%; /* Reduce the image size slightly */
             height: auto;
             border-radius: 50px;
-            margin-bottom: 20px; /* Reduce bottom margin to move content up */
+            background-color: black;
+            margin-top: 2%; /* Less margin to move everything up */
         }
 
-        .content-container p {
-            margin-bottom: 40px; /* Increase space above button */
-        }
-
+        /* Red rounded button for "HIRE ME" */
         .hire-me-btn {
             background-color: red;
             color: white;
@@ -58,11 +82,19 @@
             border-radius: 50px;
             font-size: 20px;
             cursor: pointer;
-            margin-bottom: 30px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 15px; /* More space between the image and button */
         }
 
         .hire-me-btn:hover {
             background-color: darkred;
+        }
+
+        p {
+            font-size: 18px; /* Adjust font size */
+            margin-top: 15px; /* Space between button and quote */
+            text-align: center; /* Center the text */
         }
 
         footer {
@@ -70,25 +102,42 @@
             background-color: black;
             color: white;
             position: absolute;
-            bottom: 20px;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
-            margin-bottom: 80px; /* Adjusted bottom margin */
         }
 
-        /* Mobile styles */
+        /* Responsive styles */
         @media (max-width: 600px) {
+            nav ul {
+                flex-direction: row; /* Keeps menu horizontal */
+                align-items: center;
+                justify-content: center;
+            }
+
+            .main-content {
+                height: auto; /* Allow the content to flow freely on smaller screens */
+            }
+
             .content-container img {
-                width: 60%; /* Prevent image shrinking too much */
+                width: 80%; /* Reduce the image size on smaller screens */
             }
 
             .hire-me-btn {
-                padding: 5px 20px;
-                font-size: 18px;
+                background-color: red;
+                color: white;
+                padding: 5px 25px;
+                border: none;
+                border-radius: 30px;
+                font-size: 20px;
+                cursor: pointer;
+                display: block; /* Ensure the button takes up full width and is block-level */
+                margin: 15px auto; /* Center the button under the image */
+                text-align: center; /* Center the text inside the button */
             }
 
             p {
-                font-size: 16px;
+                font-size: 16px; /* Smaller text for mobile */
             }
         }
     </style>
@@ -96,7 +145,7 @@
 
 <body>
 
-    <header>
+<header>
     <h1>My Portfolio</h1>
     <nav>
         <ul>
@@ -108,31 +157,35 @@
         </ul>
     </nav>
 </header>
-    
-    <div class="main-content">
-        <div class="content-container">
-            <img src="virtualme.jpg" alt="Profile Image">
-            <a href="contact.html" class="hire-me-btn">Hire Me</a>
-            <p>"We are what we repeatedly do. Excellence, then, is not an act, but a habit" - Aristotle</p>
-        </div>
+
+<div class="main-content">
+    <div class="content-container">
+        <img src="virtualme.jpg" alt="Profile Image">
+        <a href="contact.html" style="background-color: red; color: white; padding: 10px 15px; border-radius: 30px; text-decoration: none; font-weight: bold;">Hire Me</a>
+        <p>"We are what we repeatedly do. Excellence, then, is not an act, but a habit" - Aristotle</p>
     </div>
+</div>
 
-    <footer>
-        <!-- Footer content -->
-    </footer>
+<footer>
+    <!-- The footer will remain unchanged -->
+</footer>
 
-    <script>
-        function transitionToPage(event, page) {
-            event.preventDefault(); // Prevent default link behavior
-            const mainContent = document.querySelector('.main-content');
-            mainContent.classList.add('fade-out');
-            setTimeout(() => {
-                window.location.href = page;
-            }, 500);
-        }
-    </script>
+<script>
+    function transitionToPage(event, page) {
+        event.preventDefault(); // Prevent default link behavior
+        const mainContent = document.querySelector('.main-content');
+
+        // Start fade-out transition
+        mainContent.classList.add('fade-out');
+
+        // Wait for the fade-out transition to finish before navigating
+        setTimeout(() => {
+            window.location.href = page; // Navigate to the new page
+        }, 500); // Duration should match the CSS transition
+    }
+</script>
 
 </body>
-
+</html>
 </html>
 
