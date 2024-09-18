@@ -45,8 +45,9 @@
             text-shadow: 1px 1px 2px red;
         }
 
-        nav ul li a:hover {
-            color: #00ccff;
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #00ccff; /* Same color for hover and active */
         }
 
         .main-content {
@@ -148,7 +149,7 @@
     <h1>My Portfolio</h1>
     <nav>
         <ul>
-            <li><a href="index.html" onclick="transitionToPage(event, 'index.html')">Home</a></li>
+            <li><a href="index.html" class="active" onclick="transitionToPage(event, 'index.html')">Home</a></li>
             <li><a href="career.html" onclick="transitionToPage(event, 'career.html')">Career</a></li>
             <li><a href="digitalworks.html" onclick="transitionToPage(event, 'digitalworks.html')">Digital Creations</a></li>
             <li><a href="contact.html" onclick="transitionToPage(event, 'contact.html')">Contact</a></li>
@@ -172,9 +173,18 @@
     function transitionToPage(event, page) {
         event.preventDefault(); // Prevent default link behavior
         const mainContent = document.querySelector('.main-content');
+        const navLinks = document.querySelectorAll('nav ul li a');
 
         // Start fade-out transition
         mainContent.classList.add('fade-out');
+
+        // Remove active class from all links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Add active class to the clicked link
+        event.target.classList.add('active');
 
         // Wait for the fade-out transition to finish before navigating
         setTimeout(() => {
